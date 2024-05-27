@@ -1,0 +1,26 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>Languages</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: details()">
+        <tr>
+            <td data-bind="text: name"></td>
+            <td data-bind="text: email"></td>
+            <td data-bind="text: dob"></td>
+            <td data-bind="text: gender"></td>
+            <td data-bind="text: city"></td>
+            <td data-bind="foreach: languages">
+                <p data-bind="text: language"></p>
+            </td>
+            <td><button type="button" data-bind="click: $parent.removeItem">Remove</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+
+<div id="dynamic-list" class="add-item" data-bind="scope: 'dynamic_list'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+<div>
+
+<script type="text/x-magento-init">
+{
+    "#dynamic-list": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "dynamic_list": {
+                    "component": "Logicrays_DynamicList/js/dynamic-list",
+                    "children": {
+                        "childComponent": {
+                            "component": "Logicrays_DynamicList/js/dynamic-list-table",
+                            "config": {
+                                "template": "Logicrays_DynamicList/dynamic-list-table"
+                            },
+                            "displayArea": "table"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+</script>

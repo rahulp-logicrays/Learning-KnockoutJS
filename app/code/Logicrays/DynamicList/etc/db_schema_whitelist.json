@@ -1,0 +1,16 @@
+{
+    "logicrays_dynamic_list": {
+        "column": {
+            "entity_id": true,
+            "name": true,
+            "email": true,
+            "dob": true,
+            "gender": true,
+            "city": true,
+            "languages": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

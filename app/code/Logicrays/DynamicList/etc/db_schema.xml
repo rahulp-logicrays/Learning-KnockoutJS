@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="logicrays_dynamic_list" resource="default" engine="innodb" comment="Dynamic List Table">
+        <column xsi:type="int" name="entity_id" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="text" name="name" nullable="false" comment="Name"/>
+        <column xsi:type="text" name="email" nullable="false" comment="Email"/>
+        <column xsi:type="date" name="dob" nullable="false" comment="Date of Birth"/>
+        <column xsi:type="text" name="gender" nullable="false" comment="Gender"/>
+        <column xsi:type="text" name="city" nullable="false" comment="City"/>
+        <column xsi:type="text" name="languages" nullable="false" comment="Languages"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

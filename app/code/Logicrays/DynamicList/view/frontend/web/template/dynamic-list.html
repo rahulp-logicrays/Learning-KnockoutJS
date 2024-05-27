@@ -1,0 +1,44 @@
+<div>
+    <form data-bind="submit: addItem">
+        <div>
+            <label><strong>Name</strong></label>
+            <input data-bind="attr: {'type': 'text','placeholder': 'Enter Your Name'}, value: name">
+            <span data-bind="class: 'error', text: nameErrors"></span>
+        </div>
+        <div>
+            <label><strong>Email</strong></label>
+            <input data-bind="attr: {'type': 'text', 'placeholder': 'Enter Your Email'}, value: email">
+            <span data-bind="class: 'error', text: emailErrors"></span>
+        </div>
+        <div>
+            <label><strong>Date of Birth</strong></label>
+            <input data-bind="attr: {'type': 'date'}, value: dob">
+            <span data-bind="class: 'error', text: dobErrors"></span>
+        </div>
+        <div>
+            <label><strong>Gender</strong></label>
+            <label><input data-bind="attr: {'type': 'radio', 'name': 'gender', 'value': 'Male'}, checked: gender" />Male</label>
+            <label><input data-bind="attr: {'type': 'radio', 'name': 'gender', 'value': 'Female'}, checked: gender" />Female</label>
+            <p><span data-bind="class: 'error', text: genderErrors"></span></p>
+        </div>
+        <div>
+            <label><strong>Belong city?</strong></label>
+            <select data-bind="value: city, options: availableCities"></select>
+            <span data-bind="class: 'error', text: cityErrors"></span>
+        </div>
+        <div>
+            <label><strong>Known Languages</strong></label>
+            <div data-bind="foreach: availableLanguages">
+                <label>
+                    <input data-bind="attr: {'type': 'checkbox', 'name': 'lang'}, value: $data, checked: $parent.languages" />
+                </label>
+                <span data-bind="text: language"></span>
+            </div>
+            <span data-bind="class: 'error', text: languagesErrors"></span>
+        </div>
+        <button class="action primary" type="Submit">Add Item</button>
+    </form>
+</div>
+<!-- ko foreach: getRegion('table') -->
+<!-- ko template: getTemplate() --><!-- /ko -->
+<!-- /ko -->
